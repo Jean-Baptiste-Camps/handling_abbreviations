@@ -3,16 +3,26 @@
 import glob
 from boudams.tagger import BoudamsTagger
 import re
+import shutil
+import pie.scripts.tag
 import tqdm
 # Get output
 
-### Process calfa without spaces
+### To process
+### This one stays as is
+shutil.copy("01_htr/output/calfa-developpe_avec-espace_p48.txt", "04_evaluation/to_eval/calfa-developpe_avec-espace_p48.txt")
 
-with open("01_htr/output/calfa-developpe_sans-espace_p48.txt") as f:
-    calfa = f.read().replace('\n', '').replace('/', '')
+### This one needs processing
 
-with open("02_segmentation/input/calfa-developpe_sans-espace_p48.txt", 'w') as f:
-    f.write(calfa)
+htrout = ['01_htr/output/kraken-abrege_sans-espace_p48.txt',
+          '01_htr/output/calfa-developpe_sans-espace_p48.txt']
+
+for file in htrout:
+    with open(file, 'r') as f:
+        cleaned = f.read().replace('\n', '').replace('/', '')
+
+    with open(file.replace("01_htr/output/", "02_segmentation/input/"), 'w') as f:
+        f.write(cleaned)
 
 ######## Segment all
 
@@ -52,3 +62,18 @@ for model in glob.glob("02_segmentation/models/*"):
 
             out_io.write(out)
 
+### Now, we are done for Calfa files
+
+for file in glob.glob("02_segmentation/output/calfa-developpe_sans-espace_p48.0*"):
+    shutil.copy(file,file.replace("02_segmentation/output/", "04_evaluation/to_eval/"))
+
+### We can proceed to normalisation for the others
+
+for file in glob.glob("02_segmentation/output/kraken*"):
+    shutil.copy(file,file.replace("02_segmentation/output/", "03_normalisation/input/"))
+
+files = glob.glob("03_normalisation/input/*")
+
+for model in glob.glob("03_normalisation/models/*"):
+    modelspec = '"<'+model+",normalised>"''
+    pie.scripts.tag.run(modelspec, files, beam_width=10, use_beam=True, keep_boundaries=True, device="cpu", batch_size=50, lower=False, max_sent_len=35, vrt=True)
