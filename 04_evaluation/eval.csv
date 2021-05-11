@@ -1,5 +1,5 @@
 ,CER,WER
-to_eval/calfa-dev.mod01.txt,17.3382,87.766
 to_eval/calfa-dev_avec-espace.txt,8.7912,50.8511
-to_eval/calfa-dev.mod03.txt,14.3315,68.9362
-to_eval/calfa-dev.mod02.txt,15.7662,80.6383
+to_eval/calfa-developpe_sans-espace_p48.01.tar.txt,16.3004,82.5532
+to_eval/calfa-developpe_sans-espace_p48.02.tar.txt,14.2705,71.9149
+to_eval/calfa-developpe_sans-espace_p48.03.tar.txt,12.7747,59.4681
