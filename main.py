@@ -75,5 +75,5 @@ for file in glob.glob("02_segmentation/output/kraken*"):
 files = glob.glob("03_normalisation/input/*")
 
 for model in glob.glob("03_normalisation/models/*"):
-    modelspec = '"<'+model+",normalised>"''
+    modelspec = '"<'+model+",normalised>"
     pie.scripts.tag.run(modelspec, files, beam_width=10, use_beam=True, keep_boundaries=True, device="cpu", batch_size=50, lower=False, max_sent_len=35, vrt=True)
