@@ -2,11 +2,12 @@ import fastwer
 import glob
 import pandas
 
+
 def compute_score(gt, folder):
     """
     :param gt: address of the file containing gt
     :param folder: folder containing hypotheses to test
-    :return:
+    :return: a panda data frame with scores
     """
     with open(gt, 'r') as f:
         gt = f.readlines()
@@ -27,7 +28,7 @@ def compute_score(gt, folder):
 
     d = {'CER': CERs, 'WER': WERs}
 
-    return pandas.DataFrame(data = d, index=keys)
+    return pandas.DataFrame(data=d, index=keys)
 
 
 if __name__ == "__main__":
