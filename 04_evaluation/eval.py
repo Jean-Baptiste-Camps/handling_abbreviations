@@ -34,4 +34,5 @@ if __name__ == "__main__":
     gt = "gt_fol11_nopunct.txt"
     evals = "to_eval/*"
 
-    compute_score(gt, evals)
+    df = compute_score(gt, evals)
+    df.to_csv("eval.csv")
