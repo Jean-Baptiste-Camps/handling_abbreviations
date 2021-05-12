@@ -14,7 +14,7 @@ def compute_score(gt, folder):
 
     # gt2 = gt
     hypotheses = {}
-    for eval in glob.glob(evals):
+    for eval in glob.glob(folder):
         with open(eval, 'r') as f:
             hypotheses[eval] = f.readlines()
 
@@ -32,7 +32,7 @@ def compute_score(gt, folder):
 
 
 if __name__ == "__main__":
-    gt = "gt_fol11_nopunct.txt"
+    gt = "test_Folio11.txt"
     evals = "to_eval/*"
 
     df = compute_score(gt, evals)

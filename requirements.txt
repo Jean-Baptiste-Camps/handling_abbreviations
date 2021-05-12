@@ -1,5 +1,4 @@
-https://github.com/PonteIneptique/pie/archive/feature/optimizers.zip
-glob
+https://github.com/Jean-Baptiste-Camps/pie/archive/feature/optimizers.zip
 boudams
-re
-shutil
+fastwer
+pandas

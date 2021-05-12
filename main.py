@@ -5,12 +5,17 @@ from boudams.tagger import BoudamsTagger
 import re
 import shutil
 import pie.scripts.tag
-import tqdm
+from eval.eval import compute_score
 # Get output
 
 ### To process
-### This one stays as is
-shutil.copy("01_htr/output/calfa-developpe_avec-espace_p48.txt", "04_evaluation/to_eval/calfa-developpe_avec-espace_p48.txt")
+### This one stays almost as is
+calfa1 = "01_htr/output/calfa-developpe_avec-espace_p48.txt"
+with open(calfa1, 'r') as f:
+    cleaned = f.read().replace('\n', '').replace('/', '')
+
+with open(calfa1.replace("01_htr/output/", "04_evaluation/to_eval/"), 'w') as f:
+    f.write(cleaned)
 
 ### This one needs processing
 
@@ -74,8 +79,29 @@ for file in glob.glob("02_segmentation/output/kraken*"):
 
 files = glob.glob("03_normalisation/input/*")
 
+#FIXME this bloc does not work
 for model in glob.glob("03_normalisation/models/*"):
     modelspec = [(model, [])]
     for file in files:
         pie.scripts.tag.run(modelspec, file, beam_width=10, use_beam=True, keep_boundaries=True, device="cpu",
                             batch_size=50, lower=False, max_sent_len=35, vrt=True)
+
+# Parse TEI files to output only normalised forms
+
+for file in glob.glob("03_normalisation/input/*-pie*.txt"):
+    norms = []
+    with open(file, 'r') as f:
+        f.readline() # remove header
+        for line in f.readlines():
+            if len(line.split('\t')) > 0:
+                norms.append(line.split('\t')[1].rstrip() + ' ')
+
+    # and write to output
+    with open(file.replace("03_normalisation/input/", "04_evaluation/to_eval/"), 'w') as f:
+        f.writelines(norms)
+
+# Do the evaluation
+gt = "04_evaluation/test_Folio11.txt"
+folder = "04_evaluation/to_eval/*"
+df = compute_score(gt, folder)
+df.to_csv("04_evaluation/eval.csv")
