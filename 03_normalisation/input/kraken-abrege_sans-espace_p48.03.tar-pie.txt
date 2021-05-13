@@ -34,6 +34,7 @@ sunt	sunt
 qui	qui
 releuant	releuant
 eam	eam
+
 :	:
 piclitatur	piclitatur
 anima	anima
@@ -69,8 +70,9 @@ quam	quam
 corpus	corpus
 ꝓpͥum	proprium
 dilig̃e	diligere
+
 tenea	tenea
-m᷑	mutra
+m᷑	muter
 .	.
 ue	ue
 nob̃	nobis
@@ -104,6 +106,7 @@ adũso	aduerso
 ascendere	ascendere
 .	.
 si	si
+
 deniq	denique
 ;	;
 murum	murum
@@ -112,7 +115,7 @@ murum	murum
 domo	domo
 dñi	domini
 nos	nos
-oppoñeñ	oppontendim
+oppoñeñ	opponsentione
 cura	cura
 m᷒	mus
 .	.
@@ -139,6 +142,7 @@ futuro	futuro
 iudicemur	iudicemur
 :	:
 qͣnto	quanto
+
 nunc	nunc
 paticntie	paticntie
 ⁊	et
@@ -174,6 +178,7 @@ fecerit	fecerit
 fructum	fructum
 bonũ	bonum
 .	.
+
 ex	ex
 qꝛ	qui
 det᷑	detur
@@ -209,6 +214,7 @@ tuus	tuus
 ouẽ	ouem
 pascue	pascue
 Ꝯfitebimur	cfitebimur
+
 tibi	tibi
 in	in
 secula	secula
@@ -244,6 +250,7 @@ quib	quib
 ip̃e	ipse
 dominus	dominus
 ait	ait
+
 .	.
 Ques	Ques
 meẽ	meem
@@ -265,7 +272,7 @@ nuc̃	nucis
 mandatis	mandatis
 eius	eius
 obadiunt	obadiunt
-pĩt̃nam	piberantum
+pĩt̃nam	piberitam
 aspirationẽ	aspirationem
 :	:
 hos	hos
@@ -279,6 +286,7 @@ predestinationẽ	predestinationem
 .	.
 uñ	unde
 deꝑfecto	deperfecto
+
 uiro	uiro
 dicit᷑	dicitur
 .	.
@@ -292,7 +300,7 @@ i	i
 approbaui	approbaui
 .	.
 ĩ	in
-met̃nap̃	meternapus
+met̃nap̃	meternapunt
 destinatione	destinatione
 .	.
 Et	Et
@@ -314,6 +322,7 @@ c̃omi᷒	coromius
 hominatĩ	hominatim
 uocat	uocat
 .	.
+
 cum	cum
 nomina	nomina
 eletorum	eletorum
@@ -339,9 +348,9 @@ ip̃e	ipse
 p̃cessit᷑	precessitur
 ĩgl̃iam	ingeliam
 sẽ	sem
-prt̃nam	prestentum
+prt̃nam	pretentam
 eos	eos
-miscd̃iter	misericordiam
+miscd̃iter	misericorder
 inducit	inducit
 .	.
 ad	ad
@@ -349,6 +358,7 @@ qͣm	quam
 gl̃am	gloriam
 nos	nos
 inducere	inducere
+
 .	.
 deducere	deducere
 ⁊	et
@@ -358,7 +368,7 @@ dignetur	dignetur
 idem	idem
 dñs	dominus
 nr̃	noster
-ih̃c	iesc
+ih̃c	ihnis
 xp̃c	Christi
 :	:
 cui᷒	cuius
@@ -384,6 +394,7 @@ l	l
 omnes	omnes
 tenentes	tenentes
 gladios	gladios
+
 ⁊	et
 ad	ad
 bella	bella
@@ -419,6 +430,7 @@ s	s
 ;	;
 sapientiam	sapientiam
 da	da
+
 dño	domino
 petũt	petunt
 .⁊	.et
@@ -454,6 +466,7 @@ senem	senem
 disputationis	disputationis
 sue	sue
 Ꝯt	ut
+
 exuit	exuit
 :	:
 uidens	uidens
@@ -489,6 +502,7 @@ quib	quib
 ;	;
 ũbis	uerbis
 tam	tam
+
 p̃latorum	prelatorum
 qͣm	quam
 subditoꝝ	subditorum
@@ -524,6 +538,7 @@ insinuat	insinuat
 .	.
 ct	ct
 recte	recte
+
 prelatos	prelatos
 ecl̃ie	eculie
 fortes	fortes
@@ -534,7 +549,7 @@ enĩ	enim
 funt	funt
 mulriplici	mulriplici
 fortitudine	fortitudine
-c̃i	cauci
+c̃i	cati
 qͥd̃	quidem
 fortes	fortes
 sunt	sunt
@@ -559,6 +574,7 @@ ad	ad
 sustinendã	sustinendam
 inpetientia	inpetientia
 suꝑaudã	superaudam
+
 :	:
 liene	liene
 malicie	malicie
@@ -594,6 +610,7 @@ dissoluit᷑	dissoluitur
 .	.
 s	s
 ;	;
+
 celestib	celestib
 ;	;
 semper	semper
@@ -614,7 +631,7 @@ ĩ	in
 .	.
 quia	quia
 sicut	sicut
-apl̃c	apostoli
+apl̃c	apostolus
 siue	siue
 ꝓphetie	prophetie
 euacuabunt᷑	euacuabuntur
@@ -629,6 +646,7 @@ destruet᷑	destruetur
 :	:
 caritas	caritas
 nũqͣm	numquam
+
 excidit	excidit
 .	.
 fortẽ	fortem
@@ -661,9 +679,10 @@ instantia	instantia
 neq	neque
 ;	;
 fut	fut
-᷑aneq	Bunneque
+᷑aneq	uunneque
 ;	;
 angl̃i	angeli
+
 .	.
 neq	neque
 ;	;
@@ -699,6 +718,7 @@ separare	separare
 a	a
 caritate	caritate
 xp̃i	Christi
+
 .	.
 fortes	fortes
 etiam	etiam
@@ -732,8 +752,9 @@ ignem	ignem
 .⁊	.et
 gladiũ	gladium
 .	.
-ĩuincibl̃	inuincibulis
+ĩuincibl̃	inuinciblis
 mentis	mentis
+
 Ꝯstantia	cstantia
 suꝑauerũt	superauerunt
 .	.
@@ -769,6 +790,7 @@ in	in
 qͥdam	quidam
 loco	loco
 sic	sic
+
 ait	ait
 .	.
 Qlecti	Qlecti
@@ -804,6 +826,7 @@ tormenta	tormenta
 Ꝯtendunt	ntendunt
 .	.
 Occidi	Occidi
+
 possunt	possunt
 :	:
 s	s
@@ -820,7 +843,7 @@ porro	porro
 p̃lati	prelati
 eccl̃ie	ecclesie
 fortes	fortes
-st᷑	suru
+st᷑	sutur
 ꝑoꝑatõnem	peropationem
 :	:
 ip̃i	ipsi
@@ -839,6 +862,7 @@ fortitudinẽ	fortitudinem
 .⁊	.et
 p̃cingunt	precingunt
 se	se
+
 uirtute	uirtute
 .	.
 qui	qui
@@ -874,6 +898,7 @@ mutis	mutis
 .	.
 D᷒	Dui
 est	est
+
 pardlidas	pardlidas
 gllicitudine	gllicitudine
 gruh̃	gruhit
@@ -909,6 +934,7 @@ est	est
 acͥtionũ	acritionum
 discretione	discretione
 disponunt᷑	disponuntur
+
 :	:
 qui	qui
 sp̃m	spiritum
@@ -944,6 +970,7 @@ fortis	fortis
 potens	potens
 est	est
 in	in
+
 p̃lio	prelio
 :	:
 sub	sub
@@ -979,6 +1006,7 @@ ignorant	ignorant
 asucias	asucias
 ei᷒	eius
 .	.
+
 qui	qui
 hostis	hostis
 humani	humani
@@ -1014,6 +1042,7 @@ furet᷑	furetur
 .⁊	.et
 mactet	mactet
 ꝙd	quod
+
 perdat	perdat
 :	:
 mͥ	michi
@@ -1049,6 +1078,7 @@ p̃dam	predam
 paratus	paratus
 :	:
 tanqͦ	tanquo
+
 leo	leo
 rugiens	rugiens
 circuit	circuit
@@ -1059,13 +1089,13 @@ deuoret	deuoret
 contra	contra
 multiplices	multiplices
 hui᷒	huius
-mͣͦi	manori
+mͣͦi	marori
 tẽptationũ	temptationum
 laq̃os	laques
 .	.
 beatus	beatus
 petrus	petrus
-apl̃c	apostoli
+apl̃c	apostolus
 uigilantes	uigilantes
 ⁊	et
 cͥcum	cricum
@@ -1084,6 +1114,7 @@ uigilate	uigilate
 .	.
 ꝙꝛ	quem
 adũsatius	aduersatius
+
 uest̃	uestrum
 diabl̃s	diabulus
 .	.
@@ -1119,6 +1150,7 @@ deludat᷑	deludatur
 sapient	sapient
 :	:
 a	a
+
 uincat	uincat
 malitiãs	malitians
 ⁊	et
@@ -1154,6 +1186,7 @@ apostolus	apostolus
 Ꝯtra	ttra
 diabolice	diabolice
 fraudis	fraudis
+
 ĩidia	inidia
 suos	suos
 Ꝯ	
@@ -1163,3 +1196,4 @@ induit	induit
 ei	ei
 qͥt	quit
 armat	armat
+
