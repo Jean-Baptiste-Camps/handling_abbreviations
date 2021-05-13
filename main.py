@@ -2,10 +2,10 @@
 #import boudams.cli
 import glob
 from boudams.tagger import BoudamsTagger
-import re
 import shutil
 import pie.scripts.tag
 from eval.eval import compute_score
+import regex as re
 # Get output
 
 ### To process
@@ -75,29 +75,35 @@ for file in glob.glob("02_segmentation/output/calfa-developpe_sans-espace_p48.0*
 ### We can proceed to normalisation for the others
 
 for file in glob.glob("02_segmentation/output/kraken*"):
-    shutil.copy(file,file.replace("02_segmentation/output/", "03_normalisation/input/"))
+    # tokenise on space
+    with open(file, 'r') as f:
+        input = re.sub(r'\s+', r'\n', ''.join(f.readlines()))
 
-files = glob.glob("03_normalisation/input/*")
+    with open(file.replace("02_segmentation/output/", "03_normalisation/input/"), 'w') as f:
+        f.writelines(input)
 
+files = glob.glob("03_normalisation/input/*.tar.txt")
 #FIXME this bloc does not work
 for model in glob.glob("03_normalisation/models/*"):
-    modelspec = [(model, [])]
+    modelspec = [(model, ['normalised'])]
     for file in files:
         pie.scripts.tag.run(modelspec, file, beam_width=10, use_beam=True, keep_boundaries=True, device="cpu",
-                            batch_size=50, lower=False, max_sent_len=35, vrt=True)
+                            batch_size=2, lower=False, max_sent_len=35, vrt=True)
 
-# Parse TEI files to output only normalised forms
+    for file in glob.glob("03_normalisation/input/*-pie.txt"):
+        shutil.move(file, file.replace("-pie.txt", ("-pie" + model.split('/')[-1] + ".txt")).replace("input", "output") )
 
-for file in glob.glob("03_normalisation/input/*-pie*.txt"):
+# Parse TSV files to output only normalised forms
+for file in glob.glob("03_normalisation/output/*-pie*.txt"):
     norms = []
     with open(file, 'r') as f:
         f.readline() # remove header
         for line in f.readlines():
-            if len(line.split('\t')) > 0:
-                norms.append(line.split('\t')[1].rstrip() + ' ')
+            if len(line.split('\t')) > 1:
+                norms.append(re.sub('\s+', '', line.split('\t')[1].rstrip()) + ' ')
 
     # and write to output
-    with open(file.replace("03_normalisation/input/", "04_evaluation/to_eval/"), 'w') as f:
+    with open(file.replace("03_normalisation/output/", "04_evaluation/to_eval/"), 'w') as f:
         f.writelines(norms)
 
 # Do the evaluation
