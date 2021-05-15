@@ -4,23 +4,26 @@ import glob
 from boudams.tagger import BoudamsTagger
 import shutil
 import pie.scripts.tag
+from setuptools.glob import glob
+
 from eval.eval import compute_score
 import regex as re
 # Get output
 
 ### To process
 ### This one stays almost as is
-calfa1 = "01_htr/output/calfa-developpe_avec-espace_p48.txt"
-with open(calfa1, 'r') as f:
-    cleaned = f.read().replace('\n', '').replace('/', '')
+devs = glob.glob("01_htr/output/*-developpe_avec-espace_p48.txt")
 
-with open(calfa1.replace("01_htr/output/", "04_evaluation/to_eval/"), 'w') as f:
-    f.write(cleaned)
+for file in devs:
+    with open(file, 'r') as f:
+        cleaned = f.read().replace('\n', '').replace('/', '')
+
+    with open(file.replace("01_htr/output/", "04_evaluation/to_eval/"), 'w') as f:
+        f.write(cleaned)
 
 ### This one needs processing
 
-htrout = ['01_htr/output/kraken-abrege_sans-espace_p48.txt',
-          '01_htr/output/calfa-developpe_sans-espace_p48.txt']
+htrout = glob.glob("01_htr/output/*_sans-espace_p48.txt")
 
 for file in htrout:
     with open(file, 'r') as f:
@@ -69,12 +72,12 @@ for model in glob.glob("02_segmentation/models/*"):
 
 ### Now, we are done for Calfa files
 
-for file in glob.glob("02_segmentation/output/calfa-developpe_sans-espace_p48.0*"):
+for file in glob.glob("02_segmentation/output/*-developpe_sans-espace_p48.0*"):
     shutil.copy(file,file.replace("02_segmentation/output/", "04_evaluation/to_eval/"))
 
 ### We can proceed to normalisation for the others
 
-for file in glob.glob("02_segmentation/output/kraken*"):
+for file in glob.glob("02_segmentation/output/*abreg*"):
     # tokenise on space
     with open(file, 'r') as f:
         input = re.sub(r'\s+', r'\n', ''.join(f.readlines()))
@@ -83,10 +86,10 @@ for file in glob.glob("02_segmentation/output/kraken*"):
         f.writelines(input)
 
 files = glob.glob("03_normalisation/input/*.tar.txt")
-#FIXME this bloc does not work
 for model in glob.glob("03_normalisation/models/*"):
     modelspec = [(model, ['normalised'])]
     for file in files:
+        # Need to seriously reduce batch_size which is huge for a default cpu
         pie.scripts.tag.run(modelspec, file, beam_width=10, use_beam=True, keep_boundaries=True, device="cpu",
                             batch_size=2, lower=False, max_sent_len=35, vrt=True)
 
@@ -104,6 +107,21 @@ for file in glob.glob("03_normalisation/output/*-pie*.txt"):
 
     # and write to output
     with open(file.replace("03_normalisation/output/", "04_evaluation/to_eval/"), 'w') as f:
+        f.writelines(norms)
+
+
+
+
+for file in glob.glob("02_segmentation/train/src_expan/*.tsv"):
+    norms = []
+    with open(file, 'r') as f:
+        f.readline() # remove header
+        for line in f.readlines():
+            if len(line.split('\t')) > 1:
+                norms.append(re.sub('\s+', '', line.split('\t')[1].rstrip()) + ' ')
+
+    # and write to output
+    with open(file.replace(".tsv", ".txt"), 'w') as f:
         f.writelines(norms)
 
 # Do the evaluation

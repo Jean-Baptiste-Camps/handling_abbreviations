@@ -1,11 +1,15 @@
 ,CER,WER
+04_evaluation/to_eval/kraken-developpe_avec-espace_p48.txt,15.6313,82.3839
+04_evaluation/to_eval/kraken-developpe_sans-espace_p48.03.tar.txt,12.6546,50.8326
+04_evaluation/to_eval/kraken-developpe_sans-espace_p48.01.tar.txt,15.8326,69.5004
 04_evaluation/to_eval/calfa-developpe_sans-espace_p48.01.tar.txt,10.2962,58.0193
 04_evaluation/to_eval/kraken-abrege_sans-espace_p48.03.tar-pie01.tar.txt,9.0739,34.7064
 04_evaluation/to_eval/kraken-abrege_sans-espace_p48.02.tar-pie02.tar.txt,8.5994,31.8142
 04_evaluation/to_eval/calfa-developpe_sans-espace_p48.02.tar.txt,8.9014,48.4663
 04_evaluation/to_eval/kraken-abrege_sans-espace_p48.01.tar-pie02.tar.txt,10.2243,40.1402
-04_evaluation/to_eval/kraken-abrege_sans-espace_p48.01.tar-pie01.tar.txt,10.8858,41.2796
+04_evaluation/to_eval/kraken-abrege_sans-espace_p48.01.tar-pie01.tar.txt,10.9002,41.2796
 04_evaluation/to_eval/calfa-developpe_avec-espace_p48.txt,7.4633,54.6889
 04_evaluation/to_eval/kraken-abrege_sans-espace_p48.03.tar-pie02.tar.txt,8.8726,33.3918
 04_evaluation/to_eval/kraken-abrege_sans-espace_p48.02.tar-pie01.tar.txt,8.9301,33.1288
+04_evaluation/to_eval/kraken-developpe_sans-espace_p48.02.tar.txt,14.5959,62.489
 04_evaluation/to_eval/calfa-developpe_sans-espace_p48.03.tar.txt,6.8881,34.0053
